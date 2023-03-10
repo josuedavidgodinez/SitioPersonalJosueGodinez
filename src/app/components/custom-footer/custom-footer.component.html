@@ -2,23 +2,13 @@
     <div class="container contenido_footer">
         <div class="row ">
 
-            <div class="col-md-4">
+            <div class="col-md-4 d-none d-sm-block">
                 <ul class="list-unstyled">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                    <li  *ngFor="let meuItem of PrincipalLinks"><a [routerLink]="meuItem.link">{{meuItem.name}}</a></li>
                 </ul>
             </div>
-            <div class="col-md-8">
-                <div class="row d-flex">
-                    <div class="col-2 col-md-1" *ngFor="let socialmedia of socialMediaLinks">
-                        <a [href]="socialmedia.link">
-                            <fa-icon [icon]="socialmedia.icon">
-                            </fa-icon>
-                        </a>
-                    </div>
-                </div>
-
+            <div class="col-md-8 mt-4">
+                <app-socialmedialinks [PrimaryColorOrAccent]="true"></app-socialmedialinks>
             </div>
         </div>
         <hr>

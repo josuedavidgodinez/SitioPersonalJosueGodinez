@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
-import { faGithub,faLinkedin, IconDefinition ,faWhatsapp} from "@fortawesome/free-brands-svg-icons";
-import { faPhone, faMailBulk ,faSms} from "@fortawesome/free-solid-svg-icons";
-import { PrincipalLinks } from "../../constants/constant-links";
+import { Component, Input, OnInit } from '@angular/core';
+import { faGithub, faLinkedin, faWhatsapp, IconDefinition } from '@fortawesome/free-brands-svg-icons';
+import { faMailBulk, faPhone, faSms } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
-  selector: 'app-custom-footer',
-  templateUrl: './custom-footer.component.html',
-  styleUrls: ['./custom-footer.component.sass']
+  selector: 'app-socialmedialinks',
+  templateUrl: './socialmedialinks.component.html',
+  styleUrls: ['./socialmedialinks.component.sass']
 })
-export class CustomFooterComponent implements OnInit{
-  PrincipalLinks=PrincipalLinks
+export class SocialmedialinksComponent implements OnInit{
+  @Input()
+   PrimaryColorOrAccent:boolean= true;
+
   ngOnInit(): void {
    this.socialMediaLinks.push({link:'https://github.com/josuedavidgodinez',icon:faGithub})
    this.socialMediaLinks.push({link:'https://www.linkedin.com/in/josu%C3%A9-david-g-2148061b4/',icon:faLinkedin})
@@ -24,6 +25,8 @@ export class CustomFooterComponent implements OnInit{
     icon : IconDefinition
   } [] = []
 
+  public gotolink(link:string){
+    window.open(link)
+  }
+
 }
-
-

@@ -1,4 +1,5 @@
 $small: 700px
+$large: 992px
 
 @media screen and ( max-width: $small  )
     .nav-item
@@ -9,11 +10,52 @@ $small: 700px
 @media screen and ( min-width: $small  )
     .nav-item
         margin-inline: 1%
-        width: 22%
-        min-width: 22%
+        width: 40%
+        min-width: 40%
+
+@media screen and ( max-width: $large  )
+    .img-logo
+        width: 20%
+
+@media screen and ( min-width: $large  )
+    .img-logo
+        width: 30%
+
+
+
+.nav-brand
+    margin-inline: 1%
+    width: 17%
+    min-width: 17%
 
 .navbar-nav
     width: 70%
 
-   
+.custom_navbar
+    height: 100%
+    z-index: 1
 
+header
+    height: 20%   
+
+.row
+    width: 100%
+
+.SiteNav
+    margin-top: 10%
+
+.container-nav-hidden
+    padding: 0
+    margin: 0
+    max-width: 100%
+
+.row-nav-hidden
+    padding: 0
+    margin: 0
+
+.col-nav-hidden
+    padding: 0
+    margin: 0
+
+.nav-hidden
+    width: 100% 

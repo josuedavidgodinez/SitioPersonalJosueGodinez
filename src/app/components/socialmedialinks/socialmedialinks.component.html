@@ -1,0 +1,12 @@
+<div class="row d-flex">
+    <div class="col-2 col-lg-1" *ngFor="let socialmedia of socialMediaLinks">
+        <button *ngIf="PrimaryColorOrAccent" (click)="gotolink(socialmedia.link)" mat-mini-fab matToolti="primary'" color="primary">
+            <fa-icon [icon]="socialmedia.icon">
+            </fa-icon>
+        </button>
+        <button *ngIf="!PrimaryColorOrAccent" (click)="gotolink(socialmedia.link)"  mat-mini-fab matToolti="accent'" color="accent">
+            <fa-icon [icon]="socialmedia.icon">
+            </fa-icon>
+        </button>
+    </div>
+</div>
